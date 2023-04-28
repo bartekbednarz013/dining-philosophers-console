@@ -5,7 +5,7 @@ from multithreadingDinner import ThreadDinner
 
 if __name__ == "__main__":
     print(
-        "\nRozwiązanie klasycznego problemu ucztujących filozofów z drobną zmianą - filozofowie podczas jedzenia czytają, a uczta kończy się, gdy wszyscy filozofowie przeczytają wszystkie książki. Nad porządkiem przy stole czuwa kelner, który dopuszcza do stołu maksymalnie czterech gości jednocześnie. Do wyboru są dwie implementacje: wielowątkowa i wieloprocesowa.\n"
+        "\nRozwiązanie klasycznego problemu ucztujących filozofów, ale tym razem filozofowie podczas jedzenia czytają, a uczta kończy się, gdy wszyscy filozofowie przeczytają wszystkie książki. Nad porządkiem przy stole czuwa kelner, który dopuszcza do stołu maksymalnie czterech gości jednocześnie. Do wyboru są dwie implementacje: wielowątkowa i wieloprocesowa.\n"
     )
     guests = ["Sokrates", "Platon", "Arystoteles", "Kant", "Nietzsche"]
     while True:
@@ -20,7 +20,7 @@ if __name__ == "__main__":
             while True:
                 try:
                     how_many_books = int(
-                        input("Wprowadź liczbę książek, które mają przeczytać filozofowie i naciśnij Enter: ")
+                        input("Wprowadź liczbę książek, które mają przeczytać filozofowie i naciśnij Enter:\n")
                     )
                     dinner = (
                         ThreadDinner(guests, how_many_books)
@@ -30,6 +30,6 @@ if __name__ == "__main__":
                     dinner.start()
                     break
                 except:
-                    print("Nieprawidłowa wartość! Liczba książek musi być liczbą całkowitą!\n")
+                    print("Nieprawidłowa wartość! Liczba książek musi być liczbą całkowitą.\n")
         else:
-            print("Wprowadzono nieprawidłową wartość. Wybierz jedną z dostępnych opcji\n")
+            print("Wprowadzono nieprawidłową wartość. Wybierz jedną z dostępnych opcji.\n")

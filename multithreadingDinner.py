@@ -123,4 +123,4 @@ class ThreadDinner:
             philosopher.join()
         t2 = perf_counter()
         print("\n{}   UCZTA ZAKOŃCZONA. WSZYSCY GOŚCIE WYSZLI\n".format(datetime.now().strftime("%H:%M:%S.%f")))
-        print("Czas trwania uczty:", t2 - t1, "sekund   -   implementacja wielowątkowa\n")
+        print("Czas trwania uczty:", round(t2 - t1, 6), "sekund   -   implementacja wielowątkowa\n")
